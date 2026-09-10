@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mahayonoapp.com/sitemap.xml
