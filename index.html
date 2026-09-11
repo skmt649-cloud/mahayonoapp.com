@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Maha Yono App - Download All Yono Games APK Latest Version | 50+ Apps</title>
     <meta name="description" content="Download Maha Yono App and all verified Yono games APKs. Daily jackpots, ₹51 to ₹500 sign-up bonuses, and instant UPI withdrawals on mahayonoapp.com.">
     <meta name="keywords" content="maha yono app, all yono games, yono game apk download, new yono rummy, yono slots 2026, yono 777 apk, jaiho 91 yono">
@@ -14,6 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         :root {
@@ -27,7 +28,7 @@
             --dark-footer: #11141a;
         }
 
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -36,18 +37,26 @@
 
         html {
             scroll-behavior: smooth;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         body {
             background-color: #fafafa;
             color: var(--text-dark);
+            width: 100%;
+            max-width: 100%;
             overflow-x: hidden;
+            position: relative;
         }
 
         .container {
+            width: 100%;
             max-width: 1180px;
             margin: 0 auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
 
         /* NAVBAR */
@@ -58,6 +67,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
             box-shadow: 0 2px 10px rgba(217, 4, 41, 0.2);
         }
 
@@ -112,6 +122,8 @@
         .hero {
             padding: 50px 0 35px;
             background: linear-gradient(180deg, #fff5f6 0%, #fafafa 100%);
+            width: 100%;
+            overflow: hidden;
         }
 
         .hero-grid {
@@ -168,6 +180,7 @@
             display: flex;
             gap: 15px;
             margin-bottom: 35px;
+            flex-wrap: wrap;
         }
 
         .btn-red {
@@ -217,6 +230,8 @@
             padding: 18px 24px;
             gap: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .stat-item h4 {
@@ -271,7 +286,9 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.07);
             border: 1px solid var(--card-border);
             width: 320px;
+            max-width: 100%;
             align-self: center;
+            box-sizing: border-box;
         }
 
         .hot-header {
@@ -327,6 +344,7 @@
             justify-content: center;
             font-weight: 800;
             font-size: 0.85rem;
+            flex-shrink: 0;
         }
 
         .hot-avatar.gold {
@@ -356,6 +374,7 @@
             justify-content: center;
             font-size: 0.75rem;
             text-decoration: none;
+            flex-shrink: 0;
         }
 
         /* 2 PILL TAB BUTTONS */
@@ -364,6 +383,7 @@
             justify-content: center;
             margin: 40px 0 25px;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -415,6 +435,7 @@
             flex-direction: column;
             gap: 14px;
             margin-bottom: 35px;
+            width: 100%;
         }
 
         .game-card-row {
@@ -427,6 +448,8 @@
             justify-content: space-between;
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
             transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .game-card-row:hover {
@@ -448,6 +471,7 @@
             object-fit: cover;
             border: 1px solid #eee;
             background: #fff0f2;
+            flex-shrink: 0;
         }
 
         .game-meta h3 {
@@ -484,6 +508,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            flex-shrink: 0;
         }
 
         .btn-card-download:hover {
@@ -496,6 +521,7 @@
             flex-direction: column;
             gap: 20px;
             margin-bottom: 45px;
+            width: 100%;
         }
 
         .seo-box-card {
@@ -506,6 +532,8 @@
             padding: 26px 28px;
             box-shadow: 0 4px 18px rgba(0,0,0,0.03);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .seo-box-card:hover {
@@ -527,6 +555,7 @@
         .seo-box-card h2 i {
             color: var(--primary-crimson);
             font-size: 1.15rem;
+            flex-shrink: 0;
         }
 
         .seo-box-card p {
@@ -552,6 +581,8 @@
             padding: 40px 0;
             border-top: 1px solid #eaeaea;
             border-bottom: 1px solid #eaeaea;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .feature-box {
@@ -563,6 +594,7 @@
         .feature-icon {
             font-size: 1.6rem;
             color: var(--primary-crimson);
+            flex-shrink: 0;
         }
 
         .feature-box h4 {
@@ -581,6 +613,8 @@
         .faq-section {
             padding: 60px 0 40px;
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .faq-pill {
@@ -610,6 +644,8 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .accordion-item {
@@ -655,6 +691,8 @@
         /* NOTICES & DISCLAIMERS */
         .notices-section {
             padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .alert-card {
@@ -666,12 +704,15 @@
             display: flex;
             gap: 14px;
             align-items: flex-start;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .alert-card i {
             color: var(--primary-crimson);
             font-size: 1.2rem;
             margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .alert-card h5 {
@@ -688,11 +729,15 @@
             margin: 0;
         }
 
-        /* PLAYER REVIEWS SLIDER */
+        /* PLAYER REVIEWS SLIDER - OVERFLOW FIXED */
         .reviews-section {
             padding: 50px 0;
             text-align: center;
+            width: 100%;
+            max-width: 100%;
             overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
         }
 
         .reviews-slider-track {
@@ -701,6 +746,7 @@
             animation: scrollReview 30s linear infinite;
             width: max-content;
             padding: 25px 0;
+            will-change: transform;
         }
 
         .reviews-slider-track:hover {
@@ -717,10 +763,11 @@
             border: 1px solid #eaeaea;
             border-radius: 14px;
             padding: 20px;
-            width: 320px;
+            width: 300px;
             text-align: left;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             flex-shrink: 0;
+            box-sizing: border-box;
         }
 
         .review-stars {
@@ -754,6 +801,7 @@
             justify-content: center;
             font-size: 0.8rem;
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .review-user-info h5 {
@@ -773,6 +821,9 @@
             background: var(--dark-footer);
             color: white;
             padding: 50px 0 20px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
         }
 
         .footer-grid {
@@ -780,6 +831,8 @@
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .footer-logo {
@@ -848,9 +901,11 @@
             justify-content: space-between;
             font-size: 0.8rem;
             color: #636b83;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        /* FLOATING SCROLL-TO-TOP BUTTON */
+        /* FLOATING SCROLL-TO-TOP BUTTON - FIXED VIEWPORT */
         .scroll-top-btn {
             position: fixed;
             bottom: 25px;
@@ -869,15 +924,15 @@
             font-size: 1.15rem;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(15px);
-            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s;
-            z-index: 999;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, background 0.2s;
+            z-index: 99999;
         }
 
         .scroll-top-btn.visible {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            pointer-events: auto;
         }
 
         .scroll-top-btn:hover {
@@ -886,22 +941,44 @@
             box-shadow: 0 6px 18px rgba(217, 4, 41, 0.5);
         }
 
-        /* RESPONSIVE */
+        /* RESPONSIVE STYLES */
         @media (max-width: 768px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .container { padding: 0 16px; }
+            .nav-container { flex-direction: column; gap: 10px; text-align: center; }
+            .nav-links { gap: 14px; flex-wrap: wrap; justify-content: center; }
+            .hero { padding: 35px 0 25px; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 25px; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { margin: 0 auto 20px; }
             .hero-actions { justify-content: center; }
-            .hero-stats-box { width: 100%; justify-content: space-around; }
+            .hero-stats-box { width: 100%; justify-content: space-around; padding: 15px 10px; gap: 10px; }
             .hero-right { display: none; }
-            .game-card-row { flex-direction: column; text-align: center; gap: 14px; }
-            .game-left-info { flex-direction: column; }
+            
+            .game-card-row { 
+                flex-direction: column; 
+                text-align: center; 
+                gap: 14px; 
+                padding: 16px 12px;
+            }
+            .game-left-info { flex-direction: column; gap: 10px; }
+            .game-meta .players-count { justify-content: center; }
             .btn-card-download { width: 100%; justify-content: center; }
-            .features-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-            .scroll-top-btn { bottom: 20px; right: 20px; width: 42px; height: 42px; font-size: 1rem; }
-            .seo-box-card { padding: 20px; }
-            .seo-box-card h2 { font-size: 1.2rem; }
+            
+            .features-grid { grid-template-columns: 1fr; gap: 20px; padding: 30px 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 25px; text-align: center; }
+            .footer-logo { justify-content: center; }
+            .footer-desc { margin: 0 auto 15px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            
+            .scroll-top-btn { 
+                bottom: 20px; 
+                right: 20px; 
+                width: 44px; 
+                height: 44px; 
+                font-size: 1.05rem; 
+            }
+            .seo-box-card { padding: 18px 16px; }
+            .seo-box-card h2 { font-size: 1.15rem; flex-direction: column; text-align: center; gap: 6px; }
         }
     </style>
 </head>
@@ -1341,7 +1418,7 @@
         // Scroll to Top Functionality
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+            if (window.pageYOffset > 250 || document.documentElement.scrollTop > 250) {
                 scrollTopBtn.classList.add('visible');
             } else {
                 scrollTopBtn.classList.remove('visible');
