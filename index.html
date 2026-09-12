@@ -1351,29 +1351,32 @@
             { name: "Bingo101", bonus: "₹51", players: "18.2K", link: "https://bingo101ee.net/?code=3WFWF812PGQ&t=1788838482", img: "bingo-101.webp" }
         ];
 
+        function cleanSlug(name) {
+            return name.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        }
+
         function getIconPath(name) {
-            const cleanSlug = name.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-            return `images/${cleanSlug}.webp`;
+            return 'images/' + cleanSlug(name) + '.webp';
         }
 
         function createCardsHTML(games) {
-            return games.map(g => {
-                const imgPath = g.img ? `images/${g.img}` : getIconPath(g.name);
-                return `
-                    <div class="game-card-row">
-                        <div class="game-left-info">
-                            <img src="${imgPath}" alt="${g.name}" class="game-thumb" onerror="this.onerror=null; this.src='${DEFAULT_ICON}';">
-                            <div class="game-meta">
-                                <h3>${g.name}</h3>
-                                <div class="players-count"><i class="fa-solid fa-users"></i> ${g.players} players</div>
-                                <div class="bonus-text">Sign-up Bonus up to ${g.bonus}</div>
-                            </div>
-                        </div>
-                        <a href="${g.link}" target="_blank" rel="noopener noreferrer" class="btn-card-download">
-                            <i class="fa-solid fa-download"></i> Download
-                        </a>
-                    </div>
-                `;
+            return games.map(function(g) {
+                var imgPath = g.img ? ('images/' + g.img) : getIconPath(g.name);
+                var gameSlug = cleanSlug(g.name);
+                return '' +
+                    '<div class="game-card-row">' +
+                        '<div class="game-left-info">' +
+                            '<img src="' + imgPath + '" alt="' + g.name + '" class="game-thumb" onerror="this.onerror=null; this.src=\'' + DEFAULT_ICON + '\';">' +
+                            '<div class="game-meta">' +
+                                '<h3>' + g.name + '</h3>' +
+                                '<div class="players-count"><i class="fa-solid fa-users"></i> ' + g.players + ' players</div>' +
+                                '<div class="bonus-text">Sign-up Bonus up to ' + g.bonus + '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<a href="game.html?id=' + gameSlug + '" class="btn-card-download">' +
+                            '<i class="fa-solid fa-download"></i> Download' +
+                        '</a>' +
+                    '</div>';
             }).join('');
         }
 
@@ -1383,11 +1386,11 @@
         }
 
         function showTab(type) {
-            const allList = document.getElementById('all-games-list');
-            const newList = document.getElementById('new-games-list');
-            const tabAll = document.getElementById('tab-all');
-            const tabNew = document.getElementById('tab-new');
-            const heading = document.getElementById('tab-heading');
+            var allList = document.getElementById('all-games-list');
+            var newList = document.getElementById('new-games-list');
+            var tabAll = document.getElementById('tab-all');
+            var tabNew = document.getElementById('tab-new');
+            var heading = document.getElementById('tab-heading');
 
             if (type === 'all') {
                 allList.style.display = 'flex';
@@ -1408,8 +1411,8 @@
             el.parentElement.classList.toggle('active');
         }
 
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
+        var scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function() {
             if (window.scrollY > 300) {
                 scrollTopBtn.classList.add('visible');
             } else {
