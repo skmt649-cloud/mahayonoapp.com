@@ -15,22 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FONT AWESOME OFFICIAL CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* FONT AWESOME OVERRIDE SAFETY FIX */
-        i.fa-solid, i.fa-regular, i.fa-brands, .fa, .fa-solid, .fa-regular, .fa-brands {
-            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-        }
-
         .game-detail-wrap {
             padding: 40px 0 60px;
         }
@@ -102,6 +89,25 @@
             font-weight: 800;
             padding: 4px 10px;
             border-radius: 20px;
+        }
+
+        /* SVG In-line Icon Alignment */
+        .inline-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+
+        .title-icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-crimson);
+            margin-right: 8px;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         /* CTA BUTTONS */
@@ -203,11 +209,6 @@
             margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .info-card h2 i {
-            color: var(--primary-crimson);
         }
 
         .info-card p {
@@ -381,19 +382,27 @@
                     <h1 id="gameTitle">Game Name</h1>
                     <p class="detail-subline" id="gameSubtitle">Official APK Download • Instant UPI Withdrawal</p>
                     <div class="detail-tags">
-                        <span class="badge-verified-game"><i class="fa-solid fa-circle-check"></i> 100% Virus-Free APK</span>
+                        <span class="badge-verified-game">
+                            <svg class="inline-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            100% Virus-Free APK
+                        </span>
                         <span class="badge-bonus-game" id="gameBonusTag">🎁 ₹51 Sign-up Bonus</span>
-                        <span style="font-size: 0.8rem; color: #6c757d;" id="gamePlayersCount"><i class="fa-solid fa-users"></i> 25K+ Active Gamers</span>
+                        <span style="font-size: 0.8rem; color: #6c757d; display: inline-flex; align-items: center; gap: 4px;" id="gamePlayersCount">
+                            <svg class="inline-icon" style="fill: #6c757d; width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            25K+ Active Gamers
+                        </span>
                     </div>
                 </div>
             </div>
 
             <div class="detail-cta-row">
                 <a href="#" id="directDlBtn" target="_blank" rel="noopener noreferrer" class="btn-game-dl">
-                    <i class="fa-solid fa-download"></i> Download Now (<span id="btnBonus">₹51</span>)
+                    <svg class="inline-icon" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    Download Now (<span id="btnBonus">₹51</span>)
                 </a>
                 <a href="https://t.me/+qCSm6sh2ZcphNGI1" target="_blank" rel="noopener noreferrer" class="btn-game-tg">
-                    <i class="fa-brands fa-telegram"></i> Join Our Telegram
+                    <svg class="inline-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                    Join Our Telegram
                 </a>
             </div>
 
@@ -405,12 +414,18 @@
 
         <section class="detail-seo-blocks">
             <article class="info-card">
-                <h2><i class="fa-solid fa-gamepad"></i> About <span class="dynamic-game-name">Game</span></h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                    About <span class="dynamic-game-name" style="margin-left: 5px;">Game</span>
+                </h2>
                 <p id="aboutContent">Download the official version for fast card matching, slots excitement, and verified cash earnings. Play Teen Patti, Rummy, and slots with instant withdrawal safety.</p>
             </article>
 
             <article class="info-card">
-                <h2><i class="fa-solid fa-cloud-arrow-down"></i> How to Download & Install APK</h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                    How to Download & Install APK
+                </h2>
                 <div class="instruction-steps">
                     <div class="step-item">
                         <span class="step-circle">1</span>
@@ -428,7 +443,10 @@
             </article>
 
             <article class="info-card">
-                <h2><i class="fa-solid fa-user-plus"></i> How to Register & Claim Bonus</h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    How to Register & Claim Bonus
+                </h2>
                 <div class="instruction-steps">
                     <div class="step-item">
                         <span class="step-circle">1</span>
@@ -446,7 +464,10 @@
             </article>
 
             <article class="info-card">
-                <h2><i class="fa-solid fa-star"></i> Key Features</h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Key Features
+                </h2>
                 <ul class="feature-item-list">
                     <li>Instant 24/7 UPI & IMPS Bank withdrawals starting at only ₹100.</li>
                     <li>Zero transaction deduction fees on wallet cashouts.</li>
@@ -456,7 +477,10 @@
             </article>
 
             <article class="info-card">
-                <h2><i class="fa-solid fa-mobile-screen-button"></i> System Requirements</h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    System Requirements
+                </h2>
                 <div class="specs-grid">
                     <div class="spec-box"><strong>Operating System:</strong> Android 5.0+ / Safari PWA</div>
                     <div class="spec-box"><strong>RAM Required:</strong> 1 GB Minimum</div>
@@ -466,7 +490,10 @@
             </article>
 
             <article class="info-card">
-                <h2><i class="fa-solid fa-shield-halved"></i> Latest Updates & Security</h2>
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    Latest Updates & Security
+                </h2>
                 <p>2026 Enhanced Build: Includes upgraded encryption standards, faster transaction processing pipelines, and reduced APK load latencies across all 4G/5G mobile networks.</p>
             </article>
         </section>
@@ -491,7 +518,8 @@
                     </div>
                     <p class="footer-desc">Your ultimate destination for discovering the newest, safest, and most rewarding Yono apps. Play responsibly.</p>
                     <a href="https://t.me/+qCSm6sh2ZcphNGI1" target="_blank" rel="noopener noreferrer" class="footer-telegram-btn">
-                        <i class="fa-brands fa-telegram"></i> Join Telegram
+                        <svg class="inline-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                        Join Telegram
                     </a>
                 </div>
                 <div class="footer-col">
@@ -591,7 +619,6 @@
         document.getElementById('gameTitle').innerText = currentGame.name;
         document.getElementById('bannerTitle').innerText = "Play " + currentGame.name + " & Win Real Cash Daily";
         document.getElementById('gameBonusTag').innerText = "🎁 " + currentGame.bonus + " Sign-up Bonus";
-        document.getElementById('gamePlayersCount').innerHTML = '<i class="fa-solid fa-users"></i> ' + currentGame.players + ' Active Players';
         document.getElementById('btnBonus').innerText = currentGame.bonus;
         document.getElementById('directDlBtn').href = currentGame.link;
 
