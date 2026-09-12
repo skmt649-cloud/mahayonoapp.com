@@ -16,16 +16,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONT AWESOME OFFICIAL CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* FONT AWESOME OVERRIDE SAFETY FIX */
+        i.fa-solid, i.fa-regular, i.fa-brands, .fa, .fa-solid, .fa-regular, .fa-brands {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+
         .game-detail-wrap {
             padding: 40px 0 60px;
         }
 
-        /* Top Hero Card */
         .detail-hero-box {
             background: #ffffff;
             border: 1px solid var(--card-border);
@@ -81,6 +90,9 @@
             font-weight: 800;
             padding: 4px 10px;
             border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .badge-bonus-game {
@@ -264,7 +276,7 @@
             color: #111;
         }
 
-        /* RELATED GAMES SECTION */
+        /* RELATED GAMES */
         .related-title-wrap {
             display: flex;
             justify-content: space-between;
@@ -345,7 +357,6 @@
 </head>
 <body id="top">
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo-box">
@@ -363,7 +374,6 @@
 
     <main class="container game-detail-wrap">
 
-        <!-- Game Hero Card -->
         <section class="detail-hero-box">
             <div class="detail-top-row">
                 <img id="gameImg" src="images/good-slots-logo.webp" alt="Game Logo" class="detail-thumb">
@@ -378,7 +388,6 @@
                 </div>
             </div>
 
-            <!-- CTA Buttons -->
             <div class="detail-cta-row">
                 <a href="#" id="directDlBtn" target="_blank" rel="noopener noreferrer" class="btn-game-dl">
                     <i class="fa-solid fa-download"></i> Download Now (<span id="btnBonus">₹51</span>)
@@ -388,16 +397,13 @@
                 </a>
             </div>
 
-            <!-- Graphic Banner Box -->
             <div class="detail-banner-card">
                 <h3 id="bannerTitle">Play & Earn Daily Cash</h3>
                 <p>₹100 Minimum Withdrawal via UPI & IMPS Bank Transfer • 24/7 Player Support</p>
             </div>
         </section>
 
-        <!-- SEO Content Sections -->
         <section class="detail-seo-blocks">
-            
             <article class="info-card">
                 <h2><i class="fa-solid fa-gamepad"></i> About <span class="dynamic-game-name">Game</span></h2>
                 <p id="aboutContent">Download the official version for fast card matching, slots excitement, and verified cash earnings. Play Teen Patti, Rummy, and slots with instant withdrawal safety.</p>
@@ -444,7 +450,7 @@
                 <ul class="feature-item-list">
                     <li>Instant 24/7 UPI & IMPS Bank withdrawals starting at only ₹100.</li>
                     <li>Zero transaction deduction fees on wallet cashouts.</li>
-                    <li>Fair play certified RNG (Random Number Generator) system with zero bots.</li>
+                    <li>Fair play certified RNG system with zero bots policy.</li>
                     <li>Affiliate Program: Earn up to 30% lifetime referral recharge commission.</li>
                 </ul>
             </article>
@@ -463,10 +469,8 @@
                 <h2><i class="fa-solid fa-shield-halved"></i> Latest Updates & Security</h2>
                 <p>2026 Enhanced Build: Includes upgraded encryption standards, faster transaction processing pipelines, and reduced APK load latencies across all 4G/5G mobile networks.</p>
             </article>
-
         </section>
 
-        <!-- Related Games Section -->
         <section>
             <div class="related-title-wrap">
                 <h2>More Popular Yono Games</h2>
@@ -477,7 +481,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -515,13 +518,10 @@
         </div>
     </footer>
 
-    <!-- Dynamic Game Matcher Script -->
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // ALL 47 GAMES DATABASE
         const masterGames = [
-            // 25 All Games
             { name: "Good slots", bonus: "₹51", players: "24.5K", link: "https://4sharegoodslots.vip?pid=418514597&channel=2020001&pkg=com.goodslotsa.dss" },
             { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "https://joinhirummy.cc/?code=RX3JMQ8UJME&t=1788838089" },
             { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "https://gamerummyp.com/?code=5X1GGP4Z6NE&t=1788838163" },
@@ -547,8 +547,6 @@
             { name: "yono Arcade", bonus: "₹50", players: "33.7K", link: "https://d4x6qnqrk2hw2.cloudfront.net/YonoArcade_Agent.apk" },
             { name: "Spin Winner", bonus: "₹51", players: "25.0K", link: "https://despinwinner.com/?code=SDNK57Y7N4X&t=1788851391" },
             { name: "Yono VIP", bonus: "₹500", players: "62.4K", link: "https://uonovipfast.com/?code=3CRTKT92X76&t=1788851488" },
-
-            // 22 New Games
             { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "https://join789jackpots1.cc/?code=S3ME5MJWVHX&t=1788828641", img: "789-jackpots.webp" },
             { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "https://share677.com/?code=GFVQDGHSL39&t=1788828796" },
             { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "https://3jaihospinwin.com/?code=7TAK5VUFYFC&t=1788841419", img: "jaiho-rummy.webp" },
@@ -578,7 +576,7 @@
         }
 
         function getImg(g) {
-            return g.img ? `images/${g.img}` : `images/${cleanSlug(g.name)}.webp`;
+            return g.img ? ('images/' + g.img) : ('images/' + cleanSlug(g.name) + '.webp');
         }
 
         const params = new URLSearchParams(window.location.search);
@@ -589,12 +587,11 @@
             currentGame = masterGames[0];
         }
 
-        // Fill Page Details
-        document.getElementById('metaTitle').innerText = `${currentGame.name} APK Download | ${currentGame.bonus} Sign-up Bonus - Maha Yono`;
+        document.getElementById('metaTitle').innerText = currentGame.name + " APK Download | " + currentGame.bonus + " Sign-up Bonus - Maha Yono";
         document.getElementById('gameTitle').innerText = currentGame.name;
-        document.getElementById('bannerTitle').innerText = `Play ${currentGame.name} & Win Real Cash Daily`;
-        document.getElementById('gameBonusTag').innerText = `🎁 ${currentGame.bonus} Sign-up Bonus`;
-        document.getElementById('gamePlayersCount').innerHTML = `<i class="fa-solid fa-users"></i> ${currentGame.players} Active Players`;
+        document.getElementById('bannerTitle').innerText = "Play " + currentGame.name + " & Win Real Cash Daily";
+        document.getElementById('gameBonusTag').innerText = "🎁 " + currentGame.bonus + " Sign-up Bonus";
+        document.getElementById('gamePlayersCount').innerHTML = '<i class="fa-solid fa-users"></i> ' + currentGame.players + ' Active Players';
         document.getElementById('btnBonus').innerText = currentGame.bonus;
         document.getElementById('directDlBtn').href = currentGame.link;
 
@@ -606,22 +603,20 @@
             el.innerText = currentGame.name;
         });
 
-        // Fill Related Games (Random 8)
         const relBox = document.getElementById('relatedGamesBox');
         masterGames
             .filter(g => cleanSlug(g.name) !== cleanSlug(currentGame.name))
             .slice(0, 8)
             .forEach(g => {
                 const card = document.createElement('a');
-                card.href = `game.html?id=${cleanSlug(g.name)}`;
+                card.href = 'game.html?id=' + cleanSlug(g.name);
                 card.className = 'related-card';
-                card.innerHTML = `
-                    <img src="${getImg(g)}" alt="${g.name}" class="related-thumb" onerror="this.onerror=null; this.src='${DEFAULT_ICON}';">
-                    <div class="related-info">
-                        <h4>${g.name}</h4>
-                        <p>Bonus: ${g.bonus}</p>
-                    </div>
-                `;
+                card.innerHTML = '' +
+                    '<img src="' + getImg(g) + '" alt="' + g.name + '" class="related-thumb" onerror="this.onerror=null; this.src=\'' + DEFAULT_ICON + '\';">' +
+                    '<div class="related-info">' +
+                        '<h4>' + g.name + '</h4>' +
+                        '<p>Bonus: ' + g.bonus + '</p>' +
+                    '</div>';
                 relBox.appendChild(card);
             });
     </script>
