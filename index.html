@@ -54,7 +54,6 @@
             color: var(--text-dark);
         }
 
-        /* FA ICONS FONT OVERRIDE SAFETY */
         i.fa-solid, i.fa-regular, i.fa-brands, .fa, .fa-solid, .fa-regular, .fa-brands {
             font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
             display: inline-block;
@@ -71,7 +70,6 @@
             width: 100%;
         }
 
-        /* NAVBAR */
         .navbar {
             background: var(--primary-crimson);
             color: var(--white);
@@ -134,7 +132,6 @@
             text-decoration: underline;
         }
 
-        /* HERO SECTION */
         .hero {
             padding: 50px 0 35px;
             background: linear-gradient(180deg, #fff5f6 0%, #fafafa 100%);
@@ -387,7 +384,6 @@
             line-height: 1;
         }
 
-        /* 2 PILL TAB BUTTONS */
         .tabs-container {
             display: flex;
             justify-content: center;
@@ -417,7 +413,6 @@
             box-shadow: 0 4px 12px rgba(217, 4, 41, 0.25);
         }
 
-        /* GAME LIST SECTION */
         .games-header {
             display: flex;
             justify-content: space-between;
@@ -519,7 +514,6 @@
             background: var(--primary-hover);
         }
 
-        /* SEO SECTION */
         .seo-section {
             display: flex;
             flex-direction: column;
@@ -573,7 +567,6 @@
             color: #11141a;
         }
 
-        /* 4 VALUE PROPOSITIONS */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -606,7 +599,6 @@
             line-height: 1.4;
         }
 
-        /* FAQ ACCORDION */
         .faq-section {
             padding: 60px 0 40px;
             text-align: center;
@@ -681,7 +673,6 @@
             transform: rotate(180deg);
         }
 
-        /* NOTICES & DISCLAIMERS */
         .notices-section {
             padding: 20px 0;
         }
@@ -717,7 +708,6 @@
             margin: 0;
         }
 
-        /* PLAYER REVIEWS SLIDER */
         .reviews-section {
             padding: 50px 0;
             text-align: center;
@@ -798,7 +788,6 @@
             font-weight: 600;
         }
 
-        /* FOOTER */
         .footer {
             background: var(--dark-footer);
             color: white;
@@ -881,7 +870,6 @@
             color: #636b83;
         }
 
-        /* FLOATING SCROLL-TO-TOP BUTTON */
         .scroll-top-btn {
             position: fixed;
             bottom: 25px;
@@ -915,52 +903,15 @@
             box-shadow: 0 6px 18px rgba(217, 4, 41, 0.5);
         }
 
-        /* MOBILE RESPONSIVE & HORIZONTAL NAV SWIPE */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 8px 0;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 8px;
-                padding: 0 12px;
-            }
-
-            .logo-box {
-                align-self: flex-start;
-                gap: 8px;
-            }
-
-            .nav-site-logo {
-                height: 32px;
-            }
-
-            .logo-title {
-                font-size: 1.15rem;
-            }
-
-            .nav-links {
-                display: flex;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                gap: 16px;
-                padding-bottom: 4px;
-                scrollbar-width: none;
-            }
-
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-                padding: 4px 8px;
-                background: rgba(255, 255, 255, 0.15);
-                border-radius: 6px;
-            }
-
+            .navbar { padding: 8px 0; }
+            .nav-container { flex-direction: column; align-items: stretch; gap: 8px; padding: 0 12px; }
+            .logo-box { align-self: flex-start; gap: 8px; }
+            .nav-site-logo { height: 32px; }
+            .logo-title { font-size: 1.15rem; }
+            .nav-links { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 16px; padding-bottom: 4px; scrollbar-width: none; }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links a { font-size: 0.85rem; padding: 4px 8px; background: rgba(255, 255, 255, 0.15); border-radius: 6px; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { margin: 0 auto 20px; }
@@ -1044,7 +995,7 @@
                                 <p>18,400 playing</p>
                             </div>
                         </div>
-                        <a href="#games" onclick="showTab('all')" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="good-slots.html" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="hot-item">
                         <div class="hot-item-left">
@@ -1054,7 +1005,7 @@
                                 <p>14,200 playing</p>
                             </div>
                         </div>
-                        <a href="#games" onclick="showTab('all')" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="hi-rummy.html" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1077,10 +1028,8 @@
         </div>
 
         <div class="game-list" id="all-games-list"></div>
-
         <div class="game-list" id="new-games-list" style="display: none;"></div>
 
-        <!-- SEO HIGH-INTENT KEYWORD CARDS -->
         <div class="seo-section">
             <article class="seo-box-card">
                 <h2><i class="fa-solid fa-gamepad"></i> Maha Yono App - Play Skill-Based Games Like Rummy, Ludo, Teen Patti & Yono Slots</h2>
@@ -1288,7 +1237,6 @@
         </div>
     </footer>
 
-    <!-- SCROLL TO TOP FLOATING BUTTON -->
     <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()" title="Go to top" aria-label="Scroll to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -1296,10 +1244,18 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // ALL GAMES (25 Games)
+        // MAPPING TO STANDALONE PAGES
+        const dedicatedPages = {
+            "good-slots": "good-slots.html",
+            "hi-rummy": "hi-rummy.html",
+            "789jackpots": "789-jackpots.html",
+            "rummy-365": "rummy-365.html",
+            "jaihorummy": "jaiho-rummy.html"
+        };
+
         const allGamesList = [
-            { name: "Good slots", bonus: "₹51", players: "24.5K", link: "https://4sharegoodslots.vip?pid=418514597&channel=2020001&pkg=com.goodslotsa.dss" },
-            { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "https://joinhirummy.cc/?code=RX3JMQ8UJME&t=1788838089" },
+            { name: "Good slots", bonus: "₹51", players: "24.5K", link: "good-slots.html" },
+            { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "hi-rummy.html" },
             { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "https://gamerummyp.com/?code=5X1GGP4Z6NE&t=1788838163" },
             { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "https://inrrummysvip1.cc/?code=JMQSV5LYAPN&t=1788838234" },
             { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "https://goldrummy21.com/?code=JLXGTYVAZLS&t=1788838311" },
@@ -1325,11 +1281,10 @@
             { name: "Yono VIP", bonus: "₹500", players: "62.4K", link: "https://uonovipfast.com/?code=3CRTKT92X76&t=1788851488" }
         ];
 
-        // NEW GAMES (22 Games)
         const newGamesList = [
-            { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "https://join789jackpots1.cc/?code=S3ME5MJWVHX&t=1788828641", img: "789-jackpots.webp" },
-            { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "https://share677.com/?code=GFVQDGHSL39&t=1788828796" },
-            { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "https://3jaihospinwin.com/?code=7TAK5VUFYFC&t=1788841419", img: "jaiho-rummy.webp" },
+            { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "789-jackpots.html", img: "789-jackpots.webp" },
+            { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "rummy-365.html" },
+            { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "jaiho-rummy.html", img: "jaiho-rummy.webp" },
             { name: "Jaiho 777", bonus: "₹77", players: "29.8K", link: "https://jaiho77791.com/?code=DNQG17Q8TZT&t=1788828990" },
             { name: "Jaiho Win", bonus: "₹51", players: "22.3K", link: "https://www.jaihowin5.com/?code=1XNH62KZRMY&t=1788829055" },
             { name: "Top Rummy", bonus: "₹41", players: "19.1K", link: "https://www.toprummy.cc/?code=7K9QKHPBMLR&t=1788829136" },
@@ -1363,6 +1318,8 @@
             return games.map(function(g) {
                 var imgPath = g.img ? ('images/' + g.img) : getIconPath(g.name);
                 var gameSlug = cleanSlug(g.name);
+                var targetUrl = dedicatedPages[gameSlug] ? dedicatedPages[gameSlug] : ('game.html?id=' + gameSlug);
+
                 return '' +
                     '<div class="game-card-row">' +
                         '<div class="game-left-info">' +
@@ -1373,7 +1330,7 @@
                                 '<div class="bonus-text">Sign-up Bonus up to ' + g.bonus + '</div>' +
                             '</div>' +
                         '</div>' +
-                        '<a href="game.html?id=' + gameSlug + '" class="btn-card-download">' +
+                        '<a href="' + targetUrl + '" class="btn-card-download">' +
                             '<i class="fa-solid fa-download"></i> Download' +
                         '</a>' +
                     '</div>';
