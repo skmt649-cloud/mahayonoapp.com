@@ -44,33 +44,33 @@
     <priority>0.50</priority>
   </url>
 
-  <!-- 5 Standalone Optimized Game Pages -->
+  <!-- 5 Standalone Optimized Game Pages (Clean URLs) -->
   <url>
-    <loc>https://mahayonoapp.com/good-slots.html</loc>
+    <loc>https://mahayonoapp.com/good-slots</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://mahayonoapp.com/hi-rummy.html</loc>
+    <loc>https://mahayonoapp.com/hi-rummy</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://mahayonoapp.com/789-jackpots.html</loc>
+    <loc>https://mahayonoapp.com/789-jackpots</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://mahayonoapp.com/rummy-365.html</loc>
+    <loc>https://mahayonoapp.com/rummy-365</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://mahayonoapp.com/jaiho-rummy.html</loc>
+    <loc>https://mahayonoapp.com/jaiho-rummy</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
