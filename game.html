@@ -91,7 +91,6 @@
             border-radius: 20px;
         }
 
-        /* SVG In-line Icon Alignment */
         .inline-icon {
             width: 18px;
             height: 18px;
@@ -110,7 +109,6 @@
             vertical-align: middle;
         }
 
-        /* CTA BUTTONS */
         .detail-cta-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -160,7 +158,6 @@
             transform: translateY(-2px);
         }
 
-        /* BANNER MOCKUP */
         .detail-banner-card {
             background: linear-gradient(135deg, #15171e 0%, #202430 100%);
             border-radius: 14px;
@@ -185,7 +182,6 @@
             margin: 0;
         }
 
-        /* SEO CONTENT CARDS */
         .detail-seo-blocks {
             display: flex;
             flex-direction: column;
@@ -277,7 +273,6 @@
             color: #111;
         }
 
-        /* RELATED GAMES */
         .related-title-wrap {
             display: flex;
             justify-content: space-between;
@@ -340,19 +335,10 @@
         }
 
         @media (max-width: 768px) {
-            .detail-top-row {
-                flex-direction: column;
-                text-align: center;
-            }
-            .detail-tags {
-                justify-content: center;
-            }
-            .detail-cta-row {
-                grid-template-columns: 1fr;
-            }
-            .info-card {
-                padding: 20px 16px;
-            }
+            .detail-top-row { flex-direction: column; text-align: center; }
+            .detail-tags { justify-content: center; }
+            .detail-cta-row { grid-template-columns: 1fr; }
+            .info-card { padding: 20px 16px; }
         }
     </style>
 </head>
@@ -396,7 +382,7 @@
             </div>
 
             <div class="detail-cta-row">
-                <a href="#" id="directDlBtn" target="_blank" rel="noopener noreferrer" class="btn-game-dl">
+                <a href="#" id="directDlBtn" target="_blank" rel="nofollow noopener noreferrer" class="btn-game-dl">
                     <svg class="inline-icon" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
                     Download Now (<span id="btnBonus">₹51</span>)
                 </a>
@@ -549,9 +535,17 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
+        // MAPPING TO STANDALONE PAGES FOR RELATED BOX
+        const dedicatedPages = {
+            "good-slots": "good-slots.html",
+            "hi-rummy": "hi-rummy.html",
+            "789jackpots": "789-jackpots.html",
+            "rummy-365": "rummy-365.html",
+            "jaihorummy": "jaiho-rummy.html"
+        };
+
+        // REMOVED 5 GAMES FROM MASTER ARRAY TO PREVENT DUPLICATE THIN CONTENT
         const masterGames = [
-            { name: "Good slots", bonus: "₹51", players: "24.5K", link: "https://4sharegoodslots.vip?pid=418514597&channel=2020001&pkg=com.goodslotsa.dss" },
-            { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "https://joinhirummy.cc/?code=RX3JMQ8UJME&t=1788838089" },
             { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "https://gamerummyp.com/?code=5X1GGP4Z6NE&t=1788838163" },
             { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "https://inrrummysvip1.cc/?code=JMQSV5LYAPN&t=1788838234" },
             { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "https://goldrummy21.com/?code=JLXGTYVAZLS&t=1788838311" },
@@ -575,9 +569,6 @@
             { name: "yono Arcade", bonus: "₹50", players: "33.7K", link: "https://d4x6qnqrk2hw2.cloudfront.net/YonoArcade_Agent.apk" },
             { name: "Spin Winner", bonus: "₹51", players: "25.0K", link: "https://despinwinner.com/?code=SDNK57Y7N4X&t=1788851391" },
             { name: "Yono VIP", bonus: "₹500", players: "62.4K", link: "https://uonovipfast.com/?code=3CRTKT92X76&t=1788851488" },
-            { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "https://join789jackpots1.cc/?code=S3ME5MJWVHX&t=1788828641", img: "789-jackpots.webp" },
-            { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "https://share677.com/?code=GFVQDGHSL39&t=1788828796" },
-            { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "https://3jaihospinwin.com/?code=7TAK5VUFYFC&t=1788841419", img: "jaiho-rummy.webp" },
             { name: "Jaiho 777", bonus: "₹77", players: "29.8K", link: "https://jaiho77791.com/?code=DNQG17Q8TZT&t=1788828990" },
             { name: "Jaiho Win", bonus: "₹51", players: "22.3K", link: "https://www.jaihowin5.com/?code=1XNH62KZRMY&t=1788829055" },
             { name: "Top Rummy", bonus: "₹41", players: "19.1K", link: "https://www.toprummy.cc/?code=7K9QKHPBMLR&t=1788829136" },
@@ -608,7 +599,7 @@
         }
 
         const params = new URLSearchParams(window.location.search);
-        const idParam = params.get('id') || 'good-slots';
+        const idParam = params.get('id') || 'game-rummy';
 
         let currentGame = masterGames.find(g => cleanSlug(g.name) === idParam);
         if (!currentGame) {
@@ -635,8 +626,10 @@
             .filter(g => cleanSlug(g.name) !== cleanSlug(currentGame.name))
             .slice(0, 8)
             .forEach(g => {
+                const slug = cleanSlug(g.name);
+                const targetLink = dedicatedPages[slug] ? dedicatedPages[slug] : ('game.html?id=' + slug);
                 const card = document.createElement('a');
-                card.href = 'game.html?id=' + cleanSlug(g.name);
+                card.href = targetLink;
                 card.className = 'related-card';
                 card.innerHTML = '' +
                     '<img src="' + getImg(g) + '" alt="' + g.name + '" class="related-thumb" onerror="this.onerror=null; this.src=\'' + DEFAULT_ICON + '\';">' +
