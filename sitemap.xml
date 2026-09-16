@@ -1,50 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+  <!-- Core Website Pages -->
   <url>
     <loc>https://mahayonoapp.com/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
-
-  <!-- Game Details Hub Page -->
   <url>
     <loc>https://mahayonoapp.com/game.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.90</priority>
+    <priority>0.80</priority>
   </url>
-
-  <!-- Essential Trust & Legal Pages -->
   <url>
     <loc>https://mahayonoapp.com/about.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
   </url>
   <url>
     <loc>https://mahayonoapp.com/contact-us.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
   </url>
   <url>
     <loc>https://mahayonoapp.com/privacy-policy.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.50</priority>
   </url>
   <url>
     <loc>https://mahayonoapp.com/disclaimer.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.50</priority>
   </url>
   <url>
     <loc>https://mahayonoapp.com/responsible.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- 5 Standalone Optimized Game Pages -->
+  <url>
+    <loc>https://mahayonoapp.com/good-slots.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mahayonoapp.com/hi-rummy.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mahayonoapp.com/789-jackpots.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mahayonoapp.com/rummy-365.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mahayonoapp.com/jaiho-rummy.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 </urlset>
