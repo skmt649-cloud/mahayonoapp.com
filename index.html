@@ -518,7 +518,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 45px;
+            margin-bottom: 30px;
         }
 
         .seo-box-card {
@@ -565,6 +565,53 @@
 
         .seo-box-card strong {
             color: #11141a;
+        }
+
+        /* Dedicated Crawler Links Box */
+        .crawler-links-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 45px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .crawler-links-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #1e1e24;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .crawler-links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .crawler-btn-link {
+            font-size: 0.85rem;
+            color: var(--primary-crimson);
+            text-decoration: none;
+            font-weight: 700;
+            background: var(--soft-pink-bg);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid #ffd2d8;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .crawler-btn-link:hover {
+            background: var(--primary-crimson);
+            color: #fff;
+            border-color: var(--primary-crimson);
         }
 
         .features-grid {
@@ -995,7 +1042,7 @@
                                 <p>18,400 playing</p>
                             </div>
                         </div>
-                        <a href="good-slots.html" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="/good-slots" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="hot-item">
                         <div class="hot-item-left">
@@ -1005,7 +1052,7 @@
                                 <p>14,200 playing</p>
                             </div>
                         </div>
-                        <a href="hi-rummy.html" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="/hi-rummy" class="play-btn-circle"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1046,6 +1093,20 @@
                 <h2><i class="fa-solid fa-circle-check"></i> Why Download Maha Yono Game APK From Us?</h2>
                 <p>At <strong>mahayonoapp.com</strong>, authenticity is our priority. We exclusively host original APK packages with direct hash verification so you avoid altered or cloned apps. Benefit from daily VIP spin wheels, task-based bonuses, monthly cashback rebates, and instant referral programs where you earn passive earnings for every friend who joins.</p>
             </article>
+        </div>
+
+        <!-- Googlebot Permanent Crawl Index (Clean URLs for All 5 Dedicated Pages) -->
+        <div class="crawler-links-box">
+            <div class="crawler-links-title">
+                <i class="fa-solid fa-bolt" style="color: var(--primary-crimson);"></i> Official Dedicated Game Downloads
+            </div>
+            <div class="crawler-links-list">
+                <a href="/good-slots" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Good Slots APK</a>
+                <a href="/hi-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Hi Rummy APK</a>
+                <a href="/789-jackpots" class="crawler-btn-link"><i class="fa-solid fa-download"></i> 789Jackpots APK</a>
+                <a href="/rummy-365" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Rummy 365 APK</a>
+                <a href="/jaiho-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> JaiHo Rummy APK</a>
+            </div>
         </div>
     </section>
 
@@ -1244,18 +1305,18 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // MAPPING TO STANDALONE PAGES
+        // MAPPING TO STANDALONE CLEAN URL PAGES (Matches sitemap.xml)
         const dedicatedPages = {
-            "good-slots": "good-slots.html",
-            "hi-rummy": "hi-rummy.html",
-            "789jackpots": "789-jackpots.html",
-            "rummy-365": "rummy-365.html",
-            "jaihorummy": "jaiho-rummy.html"
+            "good-slots": "/good-slots",
+            "hi-rummy": "/hi-rummy",
+            "789jackpots": "/789-jackpots",
+            "rummy-365": "/rummy-365",
+            "jaihorummy": "/jaiho-rummy"
         };
 
         const allGamesList = [
-            { name: "Good slots", bonus: "₹51", players: "24.5K", link: "good-slots.html" },
-            { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "hi-rummy.html" },
+            { name: "Good slots", bonus: "₹51", players: "24.5K", link: "/good-slots" },
+            { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "/hi-rummy" },
             { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "https://gamerummyp.com/?code=5X1GGP4Z6NE&t=1788838163" },
             { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "https://inrrummysvip1.cc/?code=JMQSV5LYAPN&t=1788838234" },
             { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "https://goldrummy21.com/?code=JLXGTYVAZLS&t=1788838311" },
@@ -1282,9 +1343,9 @@
         ];
 
         const newGamesList = [
-            { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "789-jackpots.html", img: "789-jackpots.webp" },
-            { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "rummy-365.html" },
-            { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "jaiho-rummy.html", img: "jaiho-rummy.webp" },
+            { name: "789Jackpots", bonus: "₹789", players: "38.9K", link: "/789-jackpots", img: "789-jackpots.webp" },
+            { name: "Rummy 365", bonus: "₹51", players: "27.5K", link: "/rummy-365" },
+            { name: "JaiHoRummy", bonus: "₹100", players: "31.4K", link: "/jaiho-rummy", img: "jaiho-rummy.webp" },
             { name: "Jaiho 777", bonus: "₹77", players: "29.8K", link: "https://jaiho77791.com/?code=DNQG17Q8TZT&t=1788828990" },
             { name: "Jaiho Win", bonus: "₹51", players: "22.3K", link: "https://www.jaihowin5.com/?code=1XNH62KZRMY&t=1788829055" },
             { name: "Top Rummy", bonus: "₹41", players: "19.1K", link: "https://www.toprummy.cc/?code=7K9QKHPBMLR&t=1788829136" },
@@ -1318,7 +1379,7 @@
             return games.map(function(g) {
                 var imgPath = g.img ? ('images/' + g.img) : getIconPath(g.name);
                 var gameSlug = cleanSlug(g.name);
-                var targetUrl = dedicatedPages[gameSlug] ? dedicatedPages[gameSlug] : ('game.html?id=' + gameSlug);
+                var targetUrl = dedicatedPages[gameSlug] ? dedicatedPages[gameSlug] : g.link;
 
                 return '' +
                     '<div class="game-card-row">' +
