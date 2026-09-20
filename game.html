@@ -535,18 +535,18 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // MAPPING TO STANDALONE PAGES FOR RELATED BOX
+        // MAPPING TO STANDALONE PAGES FOR RELATED BOX (Updated with Game Rummy)
         const dedicatedPages = {
-            "good-slots": "good-slots.html",
-            "hi-rummy": "hi-rummy.html",
-            "789-jackpots": "789-jackpots.html",
-            "rummy-365": "rummy-365.html",
-            "jaiho-rummy": "jaiho-rummy.html"
+            "good-slots": "/good-slots",
+            "hi-rummy": "/hi-rummy",
+            "789-jackpots": "/789-jackpots",
+            "rummy-365": "/rummy-365",
+            "jaiho-rummy": "/jaiho-rummy",
+            "game-rummy": "/game-rummy"
         };
 
-        // REMOVED 5 GAMES FROM MASTER ARRAY TO PREVENT DUPLICATE THIN CONTENT
+        // REMOVED 6 GAMES FROM MASTER ARRAY TO PREVENT DUPLICATE THIN CONTENT
         const masterGames = [
-            { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "https://gamerummyp.com/?code=5X1GGP4Z6NE&t=1788838163" },
             { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "https://inrrummysvip1.cc/?code=JMQSV5LYAPN&t=1788838234" },
             { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "https://goldrummy21.com/?code=JLXGTYVAZLS&t=1788838311" },
             { name: "joy Rummy", bonus: "₹41", players: "18.3K", link: "https://www.joyrummy13.com/?code=J5KM1YBABLD&t=1788838415", img: "Joy-Rummy.webp" },
@@ -599,7 +599,7 @@
         }
 
         const params = new URLSearchParams(window.location.search);
-        const idParam = params.get('id') || 'game-rummy';
+        const idParam = params.get('id') || 'inr-rummy';
 
         let currentGame = masterGames.find(g => cleanSlug(g.name) === idParam);
         if (!currentGame) {
