@@ -1107,6 +1107,10 @@
                 <a href="/rummy-365" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Rummy 365 APK</a>
                 <a href="/jaiho-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> JaiHo Rummy APK</a>
                 <a href="/game-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Game Rummy APK</a>
+                <a href="/inr-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> INR Rummy APK</a>
+                <a href="/gold-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Gold Rummy APK</a>
+                <a href="/joy-rummy" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Joy Rummy APK</a>
+                <a href="/bingo-101" class="crawler-btn-link"><i class="fa-solid fa-download"></i> Bingo 101 APK</a>
             </div>
         </div>
     </section>
@@ -1306,24 +1310,28 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // MAPPING TO STANDALONE CLEAN URL PAGES (Updated with Game Rummy)
+        // MAPPING TO STANDALONE CLEAN URL PAGES (Updated with all 10 Games)
         const dedicatedPages = {
             "good-slots": "/good-slots",
             "hi-rummy": "/hi-rummy",
             "789-jackpots": "/789-jackpots",
             "rummy-365": "/rummy-365",
             "jaiho-rummy": "/jaiho-rummy",
-            "game-rummy": "/game-rummy"
+            "game-rummy": "/game-rummy",
+            "inr-rummy": "/inr-rummy",
+            "gold-rummy": "/gold-rummy",
+            "joy-rummy": "/joy-rummy",
+            "bingo-101": "/bingo-101"
         };
 
         const allGamesList = [
             { name: "Good slots", bonus: "₹51", players: "24.5K", link: "/good-slots" },
             { name: "Hi Rummy", bonus: "₹51", players: "19.2K", link: "/hi-rummy" },
             { name: "Game Rummy", bonus: "₹41", players: "15.8K", link: "/game-rummy" },
-            { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "https://inrrummysvip1.cc/?code=JMQSV5LYAPN&t=1788838234" },
-            { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "https://goldrummy21.com/?code=JLXGTYVAZLS&t=1788838311" },
-            { name: "joy Rummy", bonus: "₹41", players: "18.3K", link: "https://www.joyrummy13.com/?code=J5KM1YBABLD&t=1788838415", img: "Joy-Rummy.webp" },
-            { name: "Bingo 101", bonus: "₹51", players: "16.7K", link: "https://bingo101ee.net/?code=3WFWF812PGQ&t=1788838482", img: "bingo-101.webp" },
+            { name: "INR Rummy", bonus: "₹51", players: "22.1K", link: "/inr-rummy", img: "ind-rummy.webp" },
+            { name: "GOLD RUMMY", bonus: "₹100", players: "35.4K", link: "/gold-rummy", img: "gold-rummy.webp" },
+            { name: "joy Rummy", bonus: "₹41", players: "18.3K", link: "/joy-rummy", img: "Joy-Rummy.webp" },
+            { name: "Bingo 101", bonus: "₹100", players: "16.7K", link: "/bingo-101", img: "bingo-101.webp" },
             { name: "yono slots", bonus: "₹75", players: "42.0K", link: "https://d1klkzonq0wlhb.cloudfront.net/yonoslots_2DM49BGA1TP.apk" },
             { name: "Gogo rummy", bonus: "₹51", players: "20.9K", link: "https://www.rummybygogo.com/?code=8FWZGPPRXN5&t=1788838641" },
             { name: "Boss Rummy", bonus: "₹65", players: "27.4K", link: "https://www.bossrummym.com/?code=9HFUUUB55YM&t=1788838715" },
@@ -1365,8 +1373,7 @@
             { name: "ABC Rummy", bonus: "₹41", players: "16.5K", link: "https://www.abcrummy77.com/?code=75CRSSFAJB3&t=1788830182", img: "ABC-RUMMY.webp" },
             { name: "ind club", bonus: "₹51", players: "20.4K", link: "http://indclub95.com/?code=34UPK6AH1FF&t=1788830272" },
             { name: "567 Slots", bonus: "₹56", players: "23.1K", link: "https://join567slots0.com/?code=4NYYQKFRFXN&t=1788830372", img: "567-slots.webp" },
-            { name: "101 Z", bonus: "₹101", players: "36.7K", link: "https://101z2.com/?code=398K981GKCM&t=1788830450", img: "101z.webp" },
-            { name: "Bingo 101", bonus: "₹51", players: "18.2K", link: "https://bingo101ee.net/?code=3WFWF812PGQ&t=1788838482", img: "bingo-101.webp" }
+            { name: "101 Z", bonus: "₹101", players: "36.7K", link: "https://101z2.com/?code=398K981GKCM&t=1788830450", img: "101z.webp" }
         ];
 
         function cleanSlug(name) {
@@ -1423,7 +1430,7 @@
                 newList.style.display = 'flex';
                 tabNew.classList.add('active');
                 tabAll.classList.remove('active');
-                heading.innerText = 'New Yono Games (22)';
+                heading.innerText = 'New Yono Games (21)';
             }
         }
 
