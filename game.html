@@ -535,7 +535,7 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // MAPPING TO STANDALONE PAGES FOR RELATED BOX (Updated with Yono Slots)
+        // MAPPING TO STANDALONE PAGES FOR RELATED BOX (All 15 Dedicated Pages)
         const dedicatedPages = {
             "good-slots": "/good-slots",
             "hi-rummy": "/hi-rummy",
@@ -547,17 +547,17 @@
             "gold-rummy": "/gold-rummy",
             "joy-rummy": "/joy-rummy",
             "bingo-101": "/bingo-101",
-            "yono-slots": "/yono-slots"
+            "yono-slots": "/yono-slots",
+            "gogo-rummy": "/gogo-rummy",
+            "boss-rummy": "/boss-rummy",
+            "rummy-77": "/rummy-77",
+            "777-game": "/777-game"
         };
 
-        // EXCLUDED ALL 11 DEDICATED GAMES TO PREVENT DUPLICATE THIN CONTENT
+        // EXCLUDED ALL 15 DEDICATED GAMES TO PREVENT DUPLICATE THIN CONTENT
         const masterGames = [
-            { name: "Gogo rummy", bonus: "₹51", players: "20.9K", link: "https://www.rummybygogo.com/?code=8FWZGPPRXN5&t=1788838641" },
-            { name: "Boss Rummy", bonus: "₹65", players: "27.4K", link: "https://www.bossrummym.com/?code=9HFUUUB55YM&t=1788838715" },
             { name: "Club INR", bonus: "₹51", players: "14.1K", link: "https://clubinrvip1.vip/?code=9VCQB6F72KG&t=1788840215" },
             { name: "OK RUMMY", bonus: "₹41", players: "17.6K", link: "https://www.okrummy27.com/?code=27BBB2EC8K6&t=1788840299" },
-            { name: "Rummy 77", bonus: "₹77", players: "31.2K", link: "https://rummy77.shop/?code=F3VV9AT93B6&t=1788840684" },
-            { name: "777 game", bonus: "₹77", players: "29.8K", link: "https://www.777game2.com/?code=H53QLUT8NRG&t=1788841055" },
             { name: "Rummy Ludo", bonus: "₹41", players: "21.5K", link: "https://ludorummy.download/?code=WZTQVDKRKYZ&t=1762831007" },
             { name: "Rumble Rummy", bonus: "₹55", players: "16.4K", link: "https://www.rumblerummy333.com/?code=UC0FY3CS8R6&t=1788841219" },
             { name: "Jaiho Spin", bonus: "₹500", players: "58.1K", link: "https://3jaihospinwin.com/?code=7TAK5VUFYFC&t=1788841419" },
@@ -598,7 +598,7 @@
         }
 
         const params = new URLSearchParams(window.location.search);
-        const idParam = params.get('id') || 'gogo-rummy';
+        const idParam = params.get('id') || 'club-inr';
 
         let currentGame = masterGames.find(g => cleanSlug(g.name) === idParam);
         if (!currentGame) {
