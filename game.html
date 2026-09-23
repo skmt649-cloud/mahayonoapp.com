@@ -535,7 +535,7 @@
     <script>
         const DEFAULT_ICON = "images/good-slots-logo.webp";
 
-        // MAPPING TO STANDALONE PAGES FOR RELATED BOX (All 10 Dedicated Pages)
+        // MAPPING TO STANDALONE PAGES FOR RELATED BOX (Updated with Yono Slots)
         const dedicatedPages = {
             "good-slots": "/good-slots",
             "hi-rummy": "/hi-rummy",
@@ -546,12 +546,12 @@
             "inr-rummy": "/inr-rummy",
             "gold-rummy": "/gold-rummy",
             "joy-rummy": "/joy-rummy",
-            "bingo-101": "/bingo-101"
+            "bingo-101": "/bingo-101",
+            "yono-slots": "/yono-slots"
         };
 
-        // 10 DEDICATED GAMES EXCLUDED TO PREVENT DUPLICATE THIN CONTENT
+        // EXCLUDED ALL 11 DEDICATED GAMES TO PREVENT DUPLICATE THIN CONTENT
         const masterGames = [
-            { name: "yono slots", bonus: "₹75", players: "42.0K", link: "https://d1klkzonq0wlhb.cloudfront.net/yonoslots_2DM49BGA1TP.apk" },
             { name: "Gogo rummy", bonus: "₹51", players: "20.9K", link: "https://www.rummybygogo.com/?code=8FWZGPPRXN5&t=1788838641" },
             { name: "Boss Rummy", bonus: "₹65", players: "27.4K", link: "https://www.bossrummym.com/?code=9HFUUUB55YM&t=1788838715" },
             { name: "Club INR", bonus: "₹51", players: "14.1K", link: "https://clubinrvip1.vip/?code=9VCQB6F72KG&t=1788840215" },
@@ -598,7 +598,7 @@
         }
 
         const params = new URLSearchParams(window.location.search);
-        const idParam = params.get('id') || 'yono-slots';
+        const idParam = params.get('id') || 'gogo-rummy';
 
         let currentGame = masterGames.find(g => cleanSlug(g.name) === idParam);
         if (!currentGame) {
