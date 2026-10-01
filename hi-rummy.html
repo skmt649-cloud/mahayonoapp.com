@@ -30,6 +30,105 @@
     .related-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;}
     .related-links a{background:#e3f2fd;color:#1565c0;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:0.9rem;}
     footer{text-align:center;padding:20px;color:#757575;font-size:0.85rem;}
+
+    /* Similar Games section - bottom section only */
+    .similar-games-title{
+      margin-top:28px;
+      margin-bottom:14px;
+    }
+
+    .similar-games{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .similar-game-card{
+      background:#fff;
+      border:1px solid #e0e0e0;
+      border-radius:8px;
+      padding:10px 8px;
+      text-align:center;
+      box-shadow:0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .similar-game-logo{
+      width:52px;
+      height:52px;
+      border-radius:10px;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 7px;
+      border:1px solid #eee;
+    }
+
+    .similar-game-name{
+      display:block;
+      color:#0d47a1;
+      font-size:0.78rem;
+      font-weight:700;
+      line-height:1.2;
+      margin-bottom:4px;
+    }
+
+    .similar-game-meta{
+      display:block;
+      color:#757575;
+      font-size:0.68rem;
+      margin-bottom:7px;
+      line-height:1.25;
+    }
+
+    .similar-game-btn{
+      display:block;
+      background:#0aa83f;
+      color:#fff;
+      text-decoration:none;
+      font-size:0.68rem;
+      font-weight:700;
+      padding:6px 4px;
+      border-radius:4px;
+      line-height:1.2;
+    }
+
+    .view-all-games{
+      display:inline-block;
+      margin:14px auto 0;
+      background:#e91e63;
+      color:#fff;
+      text-decoration:none;
+      font-size:0.75rem;
+      font-weight:700;
+      padding:8px 18px;
+      border-radius:4px;
+    }
+
+    .view-all-wrap{
+      text-align:center;
+    }
+
+    @media (max-width:650px){
+      .similar-games{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:380px){
+      .similar-games{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+      }
+
+      .similar-game-card{
+        padding:8px 5px;
+      }
+
+      .similar-game-logo{
+        width:48px;
+        height:48px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -112,13 +211,126 @@
         <p>Yes, Hi Rummy is built with low-bandwidth optimization, allowing fluid gameplay on 3G, 4G, 5G, or Wi-Fi.</p>
       </div>
 
-      <h2>More Recommended Apps</h2>
-      <div class="related-links">
-        <a href="/good-slots">Good Slots APK</a>
-        <a href="/789-jackpots">789Jackpots APK</a>
-        <a href="/rummy-365">Rummy 365 APK</a>
-        <a href="/jaiho-rummy">JaiHo Rummy APK</a>
+      <h2 class="similar-games-title">Similar Games</h2>
+
+      <div class="similar-games">
+
+        <div class="similar-game-card">
+          <img src="/images/game-rummy-logo.webp"
+               alt="Game Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Game Rummy</span>
+          <span class="similar-game-meta">Rummy APK Game</span>
+          <a href="/game-rummy" class="similar-game-btn">View Game Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/inr-rummy-logo.webp"
+               alt="INR Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">INR Rummy</span>
+          <span class="similar-game-meta">Online Rummy Game</span>
+          <a href="/inr-rummy" class="similar-game-btn">View INR Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/777-game-logo.webp"
+               alt="777 Game APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">777 Game</span>
+          <span class="similar-game-meta">777 Games APK</span>
+          <a href="/777-game" class="similar-game-btn">View 777 Game</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/gold-rummy-logo.webp"
+               alt="Gold Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">GOLD RUMMY</span>
+          <span class="similar-game-meta">Gold Rummy APK</span>
+          <a href="/gold-rummy" class="similar-game-btn">View Gold Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/joy-rummy-logo.webp"
+               alt="Joy Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Joy Rummy</span>
+          <span class="similar-game-meta">Joy Rummy APK</span>
+          <a href="/joy-rummy" class="similar-game-btn">View Joy Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/gogo-rummy-logo.webp"
+               alt="Gogo Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Gogo Rummy</span>
+          <span class="similar-game-meta">Gogo Rummy APK</span>
+          <a href="/gogo-rummy" class="similar-game-btn">View Gogo Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/boss-rummy-logo.webp"
+               alt="Boss Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Boss Rummy</span>
+          <span class="similar-game-meta">Boss Rummy APK</span>
+          <a href="/boss-rummy" class="similar-game-btn">View Boss Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/ok-rummy-logo.webp"
+               alt="OK Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">OK RUMMY</span>
+          <span class="similar-game-meta">OK Rummy Game</span>
+          <a href="/game.html?id=ok-rummy" class="similar-game-btn">View OK Rummy</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/rummy-77-logo.webp"
+               alt="Rummy 77 APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Rummy 77</span>
+          <span class="similar-game-meta">Rummy 77 APK</span>
+          <a href="/rummy-77" class="similar-game-btn">View Rummy 77</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/rummy-365-logo.webp"
+               alt="Rummy 365 APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">Rummy 365</span>
+          <span class="similar-game-meta">Rummy 365 APK</span>
+          <a href="/rummy-365" class="similar-game-btn">View Rummy 365</a>
+        </div>
+
+        <div class="similar-game-card">
+          <img src="/images/jaiho-rummy-logo.webp"
+               alt="JaiHo Rummy APK"
+               class="similar-game-logo"
+               onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+          <span class="similar-game-name">JaiHo Rummy</span>
+          <span class="similar-game-meta">JaiHo Rummy APK</span>
+          <a href="/jaiho-rummy" class="similar-game-btn">View JaiHo Rummy</a>
+        </div>
+
       </div>
+
+      <div class="view-all-wrap">
+        <a href="/#games" class="view-all-games">View All Games</a>
+      </div>
+
     </article>
   </main>
 
