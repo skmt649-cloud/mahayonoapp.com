@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maha Yono App - Download All Yono Games APK Latest Version | 46+ Apps</title>
-    <meta name="description" content="Download Maha Yono App and popular Yono games APKs. Daily rewards, ₹51 to ₹500 sign-up bonuses, and fast withdrawals on mahayonoapp.com.">
-    <meta name="keywords" content="maha yono app, all yono games, yono game apk download, new yono rummy, yono slots 2026, yono 777 apk, jaiho 91 yono">
+    <title>Maha Yono App - All Yono Games, Rummy & Slots APK Download | 46+ Games</title>
+    <meta name="description" content="Explore Maha Yono App and 46+ Yono games, including Yono Rummy, Yono Slots and 777 games. Find game pages, APK download guides and the latest game updates.">
+    <meta name="keywords" content="maha yono app, maha yono games, yono games, all yono games, yono game apk download, yono rummy, yono slots, yono 777, rummy games, 777 games, apk download">
     <link rel="canonical" href="https://mahayonoapp.com/">
 
     <!-- Favicon -->
@@ -514,6 +514,85 @@
             background: var(--primary-hover);
         }
 
+        .games-search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #e7e7e7;
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin: 0 0 22px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .games-search-box i {
+            color: var(--primary-crimson);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .games-search-box input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: var(--text-dark);
+            font: inherit;
+            font-size: 0.92rem;
+        }
+
+        .games-search-box input::placeholder {
+            color: #8a8f98;
+        }
+
+        .search-empty {
+            display: none;
+            background: #fff;
+            border: 1px dashed #ddd;
+            border-radius: 12px;
+            padding: 18px;
+            margin: -18px 0 35px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .homepage-seo-intro {
+            background: #ffffff;
+            border: 1px solid #eceff3;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 0 0 28px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.03);
+        }
+
+        .homepage-seo-intro h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .homepage-seo-intro p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .homepage-seo-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .homepage-seo-intro a {
+            color: var(--primary-crimson);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .homepage-seo-intro a:hover {
+            text-decoration: underline;
+        }
+
         .seo-section {
             display: flex;
             flex-direction: column;
@@ -996,8 +1075,8 @@
         <div class="container hero-grid">
             <div class="hero-left">
                 <div class="hero-tag">Online Gaming Hub</div>
-                <h1>Explore Yono<br>Games</h1>
-                <p>Discover 46+ popular Yono games with instant registration rewards and fast UPI cashouts on mahayonoapp.com.</p>
+                <h1>Maha Yono App<br>Explore Yono Games</h1>
+                <p>Explore 46+ Yono games on Maha Yono App, including Yono Rummy, Yono Slots, 777 games and popular card and casual games.</p>
                 
                 <div class="hero-actions">
                     <a href="#games" onclick="showTab('all')" class="btn-red"><i class="fa-solid fa-play"></i> Play Now</a>
@@ -1058,6 +1137,12 @@
         </div>
     </section>
 
+    <section class="container homepage-seo-intro" aria-labelledby="yono-games-overview">
+        <h2 id="yono-games-overview">Maha Yono Games, Yono Rummy, Yono Slots & 777 Games</h2>
+        <p><strong>Maha Yono App</strong> brings together a growing collection of Yono games in one place. Browse <strong>all Yono games</strong>, compare popular game pages, and find APK download information for games such as <a href="/hi-rummy">Hi Rummy</a>, <a href="/game-rummy">Game Rummy</a>, <a href="/inr-rummy">INR Rummy</a>, <a href="/yono-slots">Yono Slots</a> and <a href="/777-game">777 Game</a>.</p>
+        <p>Use the game search below to quickly find a title, or explore the dedicated pages for <strong>Yono Rummy</strong>, <strong>Yono Slots</strong>, <strong>Rummy games</strong> and other popular Yono game APK downloads.</p>
+    </section>
+
     <section class="container" id="games">
         <div class="tabs-container">
             <button class="tab-btn active" id="tab-all" onclick="showTab('all')">
@@ -1073,13 +1158,19 @@
             <span class="badge-latest">Featured 🔥</span>
         </div>
 
+        <div class="games-search-box" role="search" aria-label="Search Yono games">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" id="gameSearchInput" placeholder="Search all Yono games by name..." aria-label="Search all Yono games by name" autocomplete="off">
+        </div>
+        <div class="search-empty" id="gameSearchEmpty">No matching game found. Try a different game name, such as Rummy, 777 or Slots.</div>
+
         <div class="game-list" id="all-games-list"></div>
         <div class="game-list" id="new-games-list" style="display: none;"></div>
 
         <div class="seo-section">
             <article class="seo-box-card">
                 <h2><i class="fa-solid fa-gamepad"></i> Maha Yono App - Skill-Based Games Like Rummy, Ludo, Teen Patti & Slots</h2>
-                <p><strong>Maha Yono App</strong> is an online resource hub for discovering popular APK packages released across the Yono games series. Discover games with instant welcome rewards, ₹51 to ₹500 starting chips, and reliable UPI cashout workflows.</p>
+                <p><strong>Maha Yono App</strong> is an online resource hub for discovering popular APK packages released across the Yono games series. Browse <strong>Yono games</strong>, <strong>Yono Rummy</strong>, <strong>Yono Slots</strong> and <strong>777 games</strong> with dedicated pages for download information, reviews and game details.</p>
             </article>
 
             <article class="seo-box-card">
@@ -1344,8 +1435,8 @@
                                 '<div class="bonus-text">Sign-up Bonus up to ' + g.bonus + '</div>' +
                             '</div>' +
                         '</div>' +
-                        '<a href="' + targetUrl + '" class="btn-card-download">' +
-                            '<i class="fa-solid fa-download"></i> Download' +
+                        '<a href="' + targetUrl + '" class="btn-card-download" aria-label="Download ' + g.name + '">' +
+                            '<i class="fa-solid fa-download"></i> Download ' + g.name +
                         '</a>' +
                     '</div>';
             }).join('');
@@ -1378,8 +1469,41 @@
             }
         }
 
+        function filterGames() {
+            var input = document.getElementById('gameSearchInput');
+            var query = input.value.trim().toLowerCase();
+            var allList = document.getElementById('all-games-list');
+            var newList = document.getElementById('new-games-list');
+            var empty = document.getElementById('gameSearchEmpty');
+
+            if (!query) {
+                allList.innerHTML = createCardsHTML(allGamesList);
+                newList.innerHTML = createCardsHTML(newGamesList);
+                empty.style.display = 'none';
+                return;
+            }
+
+            var allMatches = allGamesList.filter(function(g) {
+                return g.name.toLowerCase().indexOf(query) !== -1;
+            });
+            var newMatches = newGamesList.filter(function(g) {
+                return g.name.toLowerCase().indexOf(query) !== -1;
+            });
+
+            allList.innerHTML = createCardsHTML(allMatches);
+            newList.innerHTML = createCardsHTML(newMatches);
+            allList.style.display = allMatches.length ? 'flex' : 'none';
+            newList.style.display = newMatches.length ? 'flex' : 'none';
+            empty.style.display = (allMatches.length || newMatches.length) ? 'none' : 'block';
+        }
+
         function toggleFaq(el) {
             el.parentElement.classList.toggle('active');
+        }
+
+        var gameSearchInput = document.getElementById('gameSearchInput');
+        if (gameSearchInput) {
+            gameSearchInput.addEventListener('input', filterGames);
         }
 
         var scrollTopBtn = document.getElementById('scrollTopBtn');
