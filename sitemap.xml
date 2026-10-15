@@ -141,4 +141,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
+  <!-- 15 October Standalone Game Page -->
+  <url>
+    <loc>https://mahayonoapp.com/yono-vip</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 </urlset>
