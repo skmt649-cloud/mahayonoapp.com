@@ -591,6 +591,80 @@
     @media (max-width: 480px) {
       .similar-games { grid-template-columns: 1fr; }
     }
+
+    /* Mobile Sticky Download Bar */
+.sticky-download-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sticky-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sticky-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sticky-text h6 {
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sticky-text p {
+  color: #22c55e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-sticky-download {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  animation: pulseButton 2s infinite;
+  white-space: nowrap;
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* ताकि स्टिकी बार फुटर के आखिरी टेक्स्ट को न दबाए */
+body {
+  padding-bottom: 70px;
+}
   </style>
 
   <script type="application/ld+json">
@@ -1017,5 +1091,19 @@
     </div>
   </footer>
 
+  <!-- Sticky Bottom Bar -->
+<div class="sticky-download-bar">
+  <div class="sticky-info">
+    <img src="/images/hi-rummy.webp" alt="Hi Rummy" class="sticky-icon" onerror="this.onerror=null;this.src='/images/logo-mahayonoapp.webp';">
+    <div class="sticky-text">
+      <h6>Hi Rummy APK</h6>
+      <p>Get ₹51 Free Bonus</p>
+    </div>
+  </div>
+  <a href="https://joinhirummy.cc/?code=RX3JMQ8UJME&t=1788838089" class="btn-sticky-download" target="_blank" rel="nofollow noopener noreferrer">
+    <i class="fa-solid fa-download"></i> Download (55MB)
+  </a>
+</div>
+  
 </body>
 </html>
